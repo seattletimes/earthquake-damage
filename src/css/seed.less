@@ -27,6 +27,10 @@ body {
 .chatter {
   font-size: 15px;
   margin: auto;
+
+  @media @break {
+    padding-bottom: 15px;
+  }
 }
 
 .note {
@@ -69,10 +73,20 @@ body {
 .during {
   padding: 20px;
   padding-top: 0;
+  .display-flex;
+
+  @media @mobile {
+    padding-left: 0;
+    padding-right: 0;
+  }
 
   .during-image {
     .flex(1);
     padding-right: 10px;
+
+    @media @mobile {
+      text-align: center;
+    }
   }
 }
 
@@ -124,6 +138,19 @@ body {
     padding-bottom: 15px;
     font-size: 14px;
     color: @df-middle-gray;
+
+    @media @break {
+      display: none;
+    }
+  }
+
+  .mobile-click {
+    display: none;
+    color: black;
+
+    @media @break {
+      display: block;
+    }
   }
 }
 
@@ -133,19 +160,6 @@ body {
 
   @media @break {
     width: 80%;
-  }
-}
-
-.fa-angle-double-left {
-  @media @break {
-    display: none !important;
-  }
-}
-.fa-angle-double-up {
-  display: none !important;
-  
-  @media @break {
-    display: inline-block !important;
   }
 }
 
