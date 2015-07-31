@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= json.project.title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <%= t.include("partials/_adHead.html") %>
+  </head>
+  <body>
+
+    <responsive-child>
+      <div class="big title">Preventing earthquake damage</div>
+      <div class="chatter">
+        <div>Newer buildings are designed to ride out earthquakes, but old brick structures are vulnerable to collapse. In order to save lives and reduce – but not prevent – damage, Seattle would need to retrofit, or modify buildings categorized as unreinforced masonry.</div>
+      </div>
+
+      <div class="section">
+        <div class="info">
+          <div class="title">Unreinforced Masonry buildings (URMs)</div>
+          <div class="chatter">
+            The vast majority of stone and brick buildings constructed before earthquakes were factored into building codes around the 1940s are called URMs. Most have brick walls and wood-frame floors and roofs. Very few were built after the World War II era, and none were allowed to be built in Seattle after 1977. A tell-tale sign of URM construction is header courses – lines of bricks turned on end.
+          </div>
+        </div>
+        <div class="image-container"><img src="./assets/masonry.jpeg"></img></div>
+      </div>
+
+      <div class="title">During an earthquake</div>
+      <div class="chatter">
+        Old brick buildings are vulnerable because there’s often no connection from walls and parapets to the rest of the structure. As a result, parapets can break off and entire buildings can collapse, injuring or killing occupants and passerby. Retrofitting reduces the danger.
+      </div>
+
+      <div class="retrofitting section">
+        <div class="image-container">
+          <div class="retro-image">
+            <img src="./assets/retrofitting.jpeg"></img>
+            <div class="dot one">1</div>
+            <div class="dot two">2</div>
+            <div class="dot three">3</div>
+            <div class="dot four">4</div>
+            <div class="dot five">5</div>
+            <div class="dot six">6</div>
+          </div>
+        </div>
+
+        <div class="info">
+          <div class="title">Retrofitting of old brick buildings</div>
+          <div class="chatter">
+            Upgrading an old building to make it more earthquake-safe is called seismic retrofitting. The process involves connecting brick walls and parapets to the roof and floors.
+          </div>
+          <div class="details chatter"></div>
+        </div>
+      </div>
+
+      <div class="source"><em>Sources:  Seattle Department of Planning and Development, Nancy Devine of Seattle Department of Planning and Development, FEMA, American Society of Civil Engineers, seblog.strongtie.com, Mark Pierepiekarz of MRP Engineering</em></div>
+      <div class="credit">STEPHANIE REDDING AND AUDREY CARLSEN / THE SEATTLE TIMES</div>
+    </responsive-child>
+
+    <script src="app.js"></script>
+    <% if (json.project.production) { %>
+    <%= !json.project.embedded ? t.include("partials/_adFoot.html") : "" %>
+    <%= t.include("partials/_workHere.html") %>
+    <% } %>
+  </body>
+</html>
