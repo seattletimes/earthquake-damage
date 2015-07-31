@@ -26,7 +26,6 @@ body {
 
 .chatter {
   font-size: 15px;
-  padding-bottom: 15px;
   margin: auto;
 }
 
@@ -59,9 +58,21 @@ body {
 .masonry {
   .info {
     .flex(2);
+    padding-bottom: 0;
   }
   .image-container {
     .flex(3);
+    padding-bottom: 0;
+  }
+}
+
+.during {
+  padding: 20px;
+  padding-top: 0;
+
+  .during-image {
+    .flex(1);
+    padding-right: 10px;
   }
 }
 
@@ -109,6 +120,7 @@ body {
   }
 
   .click {
+    padding-top: 10px;
     padding-bottom: 15px;
     font-size: 14px;
     color: @df-middle-gray;
@@ -149,7 +161,7 @@ body {
   cursor: pointer;
 
   &:hover {
-    background: @df-blue;
+    background: @df-orange;
   }
 
   &.selected {
@@ -193,6 +205,5 @@ body {
 }
 
 .source {
-  padding-top: 6px;
   padding-bottom: 6px;
 }
