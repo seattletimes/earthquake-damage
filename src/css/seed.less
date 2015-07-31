@@ -31,6 +31,12 @@ body {
   // font-family: @df-serif;
 }
 
+.note {
+  font-size: 11px;
+  font-style: italic;
+  padding-top: 15px;
+}
+
 .image-container {
   text-align: center;
 }
@@ -38,9 +44,44 @@ body {
 .retrofitting {
   .display-flex;
 
+  @media @break {
+    display: block;
+
+    .details {
+      display: none;
+    }
+  }
+
+  .mobile.details {
+    display: none;
+
+    @media @break {
+      display: block;
+    }
+  }
+
   .info, .image-container {
     .flex(1);
+    .flex-order(1);
     padding: 20px;
+
+    @media @break {
+      padding: 0;
+    }
+  }
+
+  .info {
+    .flex-order(2);
+
+    @media @break {
+      .flex-order(1);
+    }
+  }
+
+  table {
+    background: @df-off-white;
+    padding: 10px;
+    border-radius: 3px;
   }
 
   td {
@@ -75,22 +116,18 @@ body {
   &.one {
     top: 21%;
     left: 62%;
-    padding-left: 1px;
   }
   &.two {
     top: 42%;
     left: 68%;
-    padding-right: 1px;
   }
   &.three {
     top: 80%;
     left: 68%;
-    padding-right: 1px;
   }
   &.four {
     top: 65%;
     left: 77%;
-    padding-right: 1px;
   }
   &.five {
     top: 29%;
