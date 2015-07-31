@@ -93,16 +93,6 @@ body {
 .retrofitting {
   @media @break {
     .details {
-      display: none;
-    }
-  }
-
-  .mobile.details {
-    display: none;
-    text-align: left;
-
-    @media @break {
-      display: block;
     }
   }
 
@@ -123,6 +113,10 @@ body {
     background: @df-off-white;
     padding: 10px;
     border-radius: 3px;
+
+    @media @break {
+      margin-top: 15px;
+    }
   }
 
   td {
@@ -140,16 +134,20 @@ body {
     color: @df-middle-gray;
 
     @media @break {
-      display: none;
+      text-align: center;
+      padding: 0;
     }
   }
 
-  .mobile-click {
-    display: none;
-    color: black;
-
+  .fa-angle-double-left {
     @media @break {
-      display: block;
+      display: none;
+    }
+  }
+  .fa-angle-double-down {
+    display: none;
+    @media @break {
+      display: inline-block;
     }
   }
 }
