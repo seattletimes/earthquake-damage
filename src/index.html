@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
     <%= t.include("partials/_adHead.html") %>
   </head>
   <body>
@@ -15,7 +16,7 @@
         <div>Newer buildings are designed to ride out earthquakes, but old brick structures are vulnerable to collapse. In order to save lives and reduce – but not prevent – damage, Seattle would need to retrofit, or modify buildings categorized as unreinforced masonry.</div>
       </div>
 
-      <div class="section">
+      <div class="masonry section">
         <div class="info">
           <div class="title">Unreinforced Masonry buildings (URMs)</div>
           <div class="chatter">
@@ -25,9 +26,13 @@
         <div class="image-container"><img src="./assets/masonry.jpeg"></img></div>
       </div>
 
-      <div class="title">During an earthquake</div>
-      <div class="chatter">
-        Old brick buildings are vulnerable because there’s often no connection from walls and parapets to the rest of the structure. As a result, parapets can break off and entire buildings can collapse, injuring or killing occupants and passerby. Retrofitting reduces the danger.
+      <div class="section">
+        <div class="info">
+          <div class="title">During an earthquake</div>
+          <div class="chatter">
+            Old brick buildings are vulnerable because there’s often no connection from walls and parapets to the rest of the structure. As a result, parapets can break off and entire buildings can collapse, injuring or killing occupants and passerby. Retrofitting reduces the danger.
+          </div>
+        </div>
       </div>
 
       <div class="retrofitting section">
@@ -41,7 +46,7 @@
         <div class="image-container">
           <div class="retro-image">
             <img src="./assets/retrofitting.jpeg"></img>
-            <div class="dot one">1</div>
+            <div class="dot one selected">1</div>
             <div class="dot two">2</div>
             <div class="dot three">3</div>
             <div class="dot four">4</div>

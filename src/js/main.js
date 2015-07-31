@@ -44,15 +44,30 @@ var retrofitSteps = {
   }
 };
 
+var step = retrofitSteps[1];
+$(".details").html(`
+  <div class="click"><i class="fa fa-angle-double-left"></i> <em>Click on numbers for details.</em> <i class="fa fa-angle-double-up"></i></div>
+  <table>
+    <tr>
+      <td><div class="dot selected inline">1</div>
+      <td class="details-text"><strong>${step.title} (${step.required}):</strong> ${step.text}
+    </tr>
+  </table>
+  <div class="note">${step.note}</div>
+`);
+
 $(".dot").click(function(e) {
-  var step = retrofitSteps[e.target.innerHTML];
+  $(".dot").removeClass("selected");
+  $(e.target).addClass("selected");
+  step = retrofitSteps[e.target.innerHTML];
   $(".details").html(`
+    <div class="click"><i class="fa fa-angle-double-left"></i> <em>Click on numbers for details.</em> <i class="fa fa-angle-double-up"></i></div>
     <table>
       <tr>
-        <td><div class="dot inline">${e.target.innerHTML}</div>
+        <td><div class="dot selected inline">${e.target.innerHTML}</div>
         <td class="details-text"><strong>${step.title} (${step.required}):</strong> ${step.text}
       </tr>
     </table>
     <div class="note">${step.note}</div>
-  `)
+  `);
 })

@@ -28,7 +28,6 @@ body {
   font-size: 15px;
   padding-bottom: 15px;
   margin: auto;
-  // font-family: @df-serif;
 }
 
 .note {
@@ -41,12 +40,33 @@ body {
   text-align: center;
 }
 
-.retrofitting {
+.section {
   .display-flex;
 
   @media @break {
     display: block;
+  }
+}
 
+.info, .image-container {
+  padding: 20px;
+
+  @media @break {
+    padding: 0;
+  }
+}
+
+.masonry {
+  .info {
+    .flex(2);
+  }
+  .image-container {
+    .flex(3);
+  }
+}
+
+.retrofitting {
+  @media @break {
     .details {
       display: none;
     }
@@ -54,6 +74,7 @@ body {
 
   .mobile.details {
     display: none;
+    text-align: left;
 
     @media @break {
       display: block;
@@ -63,11 +84,6 @@ body {
   .info, .image-container {
     .flex(1);
     .flex-order(1);
-    padding: 20px;
-
-    @media @break {
-      padding: 0;
-    }
   }
 
   .info {
@@ -91,15 +107,38 @@ body {
       padding-left: 5px;
     }
   }
+
+  .click {
+    padding-bottom: 15px;
+    font-size: 14px;
+    color: @df-middle-gray;
+  }
 }
 
 .retro-image {
   position: relative;
   display: inline-block;
+
+  @media @break {
+    width: 80%;
+  }
+}
+
+.fa-angle-double-left {
+  @media @break {
+    display: none !important;
+  }
+}
+.fa-angle-double-up {
+  display: none !important;
+  
+  @media @break {
+    display: inline-block !important;
+  }
 }
 
 .dot {
-  background: @df-blue;
+  background: @df-dark-gray;
   width: 23px;
   height: 23px;
   padding-top: 3px;
@@ -110,7 +149,11 @@ body {
   cursor: pointer;
 
   &:hover {
-    background: @df-orange;
+    background: @df-blue;
+  }
+
+  &.selected {
+    background: @df-blue;
   }
 
   &.one {
