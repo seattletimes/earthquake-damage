@@ -12,13 +12,13 @@ var retrofitSteps = {
     required: "required",
     note: ""
   },
-  3: {
+  2: {
     title: "Wall-to-roof diaphragm anchors",
     text: "Steel bolts horizontally connect the brick wall to the roof. Rosettes seen on the outside of a building can indicate that this retrofit has been done.",
     required: "required",
     note: ""
   },
-  6: {
+  3: {
     title: "Wall-to-floor diaphragm anchors",
     text: " Steel bolts connect the brick wall to the floors.",
     required: "required",
@@ -30,13 +30,13 @@ var retrofitSteps = {
     required: "occasionally required",
     note: ""
   },
-  2: {
+  5: {
     title: "Overall building bracing*",
     text: "Steel beams that increase a building’s overall strength.",
     required: "occasionally required",
     note: "Note*: Overall building bracing and diaphragm strengthening are often important for buildings with large windowed shops on the first level."
   },
-  5: {
+  6: {
     title: "Diaphragm strengthening*",
     text: "Plywood sheathing that strengthen floors and roofs.",
     required: "occasionally required",
