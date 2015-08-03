@@ -98,7 +98,7 @@ img {
 
   .masonry-image {
     @media @mobile {
-      width: 80%;
+      width: 90%;
     }
   }
 }
@@ -118,6 +118,28 @@ img {
 
     @media @mobile {
       text-align: center;
+    }
+
+    .animation-title {
+      font-weight: bold;
+      text-align: center;
+      font-size: 14px;
+      padding-bottom: 15px;
+
+      @media @mobile {
+        font-size: 13px;
+        padding-right: 2px;
+        padding-left: 2px;
+      }
+
+      .aside {
+        @media @break {
+          display: block;
+        }
+        @media @mobile {
+          display: inline-block;
+        }
+      }
     }
   }
 }
@@ -190,7 +212,7 @@ img {
   display: inline-block;
 
   @media @mobile {
-    width: 80%;
+    width: 90%;
   }
 }
 
