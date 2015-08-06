@@ -14,13 +14,13 @@ var retrofitSteps = {
   },
   2: {
     title: "Wall-to-roof diaphragm anchors",
-    text: "Steel bolts horizontally connect the brick wall to the roof. Rosettes seen on the outside of a building can indicate that this retrofit has been done.",
+    text: "Steel bolts horizontally secure the brick wall to the roof. Rosettes seen on the outside of a building can indicate that this retrofit has been done.",
     required: "required",
     note: ""
   },
   3: {
     title: "Wall-to-floor diaphragm anchors",
-    text: " Steel bolts connect the brick wall to the floors.",
+    text: "Steel bolts tie the brick wall to the floors.",
     required: "required",
     note: ""
   },
