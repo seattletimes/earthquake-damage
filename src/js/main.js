@@ -8,7 +8,7 @@ var $ = require("jquery");
 var retrofitSteps = {
   1: {
     title: "Parapet bracing",
-    text: "The portions of a wall that extend past the roof (parapets) need a diagonal bracing that is generally made of steel.",
+    text: "The portions of a wall that extend past the roof (parapet) need a diagonal bracing that is generally made of steel.",
     required: "required",
     note: ""
   },
@@ -38,7 +38,7 @@ var retrofitSteps = {
   },
   6: {
     title: "Diaphragm strengthening*",
-    text: "Plywood sheathing that strengthen floors and roofs.",
+    text: "Plywood sheathing that strengthens floors and roofs.",
     required: "occasionally required",
     note: "Note*: Overall building bracing and diaphragm strengthening are often important for buildings with large windowed shops on the first level."
   }
