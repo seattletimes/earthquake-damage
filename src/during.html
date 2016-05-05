@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= json.project.title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <%= t.include("partials/_adHead.html") %>
+  </head>
+  <body>
+
+    <responsive-child>
+      <div class="outer">
+        <div class="divider"></div>
+
+        <div class="info">
+          <div class="title">During an earthquake</div>
+          <div class="chatter">
+            Unreinforced masonry buildings are vulnerable because the walls and parapets aren’t securely tied to the floors and roof. In an earthquake, parapets can break away, walls pull apart and the floors collapse. Retrofitting reduces the danger.
+          </div>
+        </div>
+        <div class="during section">
+          <div class="during-image">
+            <div class="animation-title">Parapet breaks off <span class="aside">(URM)</span></div>
+            <img src="./assets/parapet-FINAL.gif"></img>
+          </div>
+          <div class="during-image">
+            <div class="animation-title">Building collapses <span class="aside">(URM)</span></div>
+            <img src="./assets/collapse-FINAL.gif"></img>
+          </div>
+          <div class="during-image">
+            <div class="animation-title">Building stays intact <span class="aside">(retrofit)</span></div>
+            <img src="./assets/retrofit-FINAL.gif"></img>
+          </div>
+        </div>  
+
+        <div class="right alt credit">STEPHANIE REDDING / THE SEATTLE TIMES</div>
+
+        <div class="divider"></div>
+      </div>
+    </responsive-child>
+
+    <script src="app.js"></script>
+    <% if (json.project.production) { %>
+    <%= !json.project.embedded ? t.include("partials/_adFoot.html") : "" %>
+    <%= t.include("partials/_workHere.html") %>
+    <% } %>
+  </body>
+</html>

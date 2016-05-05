@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <title><%= json.project.title %></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <%= t.include("partials/_adHead.html") %>
+  </head>
+  <body>
+
+    <responsive-child>
+      <div class="outer">
+
+        <div class="divider"></div>  
+
+        <div class="retrofitting section">
+          <div class="info">
+            <div class="title">Retrofitting old brick buildings</div>
+            <div class="chatter">
+              Upgrading an old building to make it more earthquake-safe involves connecting brick walls and parapets to the roof and floors.
+            </div>
+            <div class="click"><i class="fa fa-angle-double-left"></i> <em>Click on numbers for details.</em> <i class="fa fa-angle-double-down"></i></div>
+            <div class="details chatter">
+            <table>
+              <tr>
+                <td><div class="dot selected inline">1</div>
+                <td class="details-text"><strong>Parapet bracing (required):</strong> The portions of a wall that extend past the roof (parapet) need a diagonal bracing that is generally made of steel.
+              </tr>
+            </table>
+            <div class="note"></div>
+          </div>
+          </div>
+          <div class="image-container">
+            <div class="retro-image">
+              <img src="./assets/retrofitting.jpeg"></img>
+              <div class="dot selected one">1</div>
+              <div class="dot two">2</div>
+              <div class="dot three">3</div>
+              <div class="dot four">4</div>
+              <div class="dot five">5</div>
+              <div class="dot six">6</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="alt credit">STEPHANIE REDDING and AUDREY CARLSEN / THE SEATTLE TIMES</div>
+
+        <div class="divider"></div>
+      </div>
+    </responsive-child>
+
+    <script src="app.js"></script>
+    <% if (json.project.production) { %>
+    <%= !json.project.embedded ? t.include("partials/_adFoot.html") : "" %>
+    <%= t.include("partials/_workHere.html") %>
+    <% } %>
+  </body>
+</html>
